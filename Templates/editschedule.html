@@ -1,0 +1,53 @@
+<html >
+<head>
+<style>
+::-webkit-input-placeholder{
+   color: black;
+}
+
+</style>
+</head>
+<body>
+<div class="header">
+	<h1> The LNM Institute of Information Technology <br><span class="tagline">STUDENT FACULTY MEETING PORTAL</span></h1><br>
+</div>
+<div>
+	<div class="headershort">
+		<div class="user">
+			<span class="profile" >Hi <u style="cursor:pointer; color: blue;">{{username}}</u></span>
+		</div>
+		<div class="userhome">
+			<a ui-sref="facultyhome"><input type="button" value="Home"></a>
+		</div>
+		<div class="logout">
+			<a><input type="button" value="Logout" ng-click="logout()"></a>
+		</div>
+		<div class="well">
+			<input type="text" placeholder="Search Requests" ng-model="searchText.name">
+		</div>
+	</div>
+	<div class="menu">
+		<div class="menulist">
+			<div class="element1">
+				<span class="elementdetail"><a ui-sref="facultyhome"> Request List</a></span>
+			</div>
+			<div class="element3">
+				<span class="elementdetail"> <a ui-sref="addschedule"> Add a free slot</a></span>
+			</div>
+			
+		</div>
+		<div class="data"  ng-controller="addsch">
+            <form ng-submit="submitForm()">
+			    <div class="requestform">
+				    <label>Date : -  </label><input type="date" name="time" ng-model = "date"><br>
+				    <br>
+				    <label>From : - </label><br><input type="time" name="time" ng-model = "startt"><br><br>
+				    <label>To : -  </label><br><input type="time" name="time" ng-model = "endt"><br>
+				    <br><br>
+				    <button type="submit" name="submit">Submit</button>
+			    </div>
+            </form>
+		</div>
+	</div>
+</div>
+</body>

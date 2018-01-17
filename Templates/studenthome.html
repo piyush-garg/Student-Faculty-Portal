@@ -1,0 +1,56 @@
+<html >
+<head>
+<style>
+::-webkit-input-placeholder{
+   color: black;
+}
+</style>
+</head>
+<body>
+<div class="header">
+	<h1> The LNM Institute of Information Technology <br><span class="tagline">STUDENT FACULTY MEETING PORTAL</span></h1><br>
+</div>
+<div >
+	<div class="headershort">
+		<div class="user">
+			<span class="profile" >Hi <u style="cursor:pointer; color: blue;">{{username}}</u></span>
+		</div>
+		<div class="userhome">
+			<a ui-sref="studenthome"><input type="button" value="Home"></a>
+		</div>
+		<div class="logout">
+			<a ui-sref="login"><input type="button" value="Logout"></a>
+		</div>
+		<div class="well">
+			<input type="text" placeholder="Search Requests" ng-model="searchText.name">
+		</div>
+	</div>
+	<div class="menu">
+		<div class="menulist">
+			<div class="element1">
+				<span class="elementdetail" ui-sref="studenthome"> Request Appoinment</span>
+			</div>
+			<div class="element2">
+				<span class="elementdetail"> <a ui-sref="facultyschedule"> Show Schedule of Faculty</a></span>
+			</div>
+			<div class="element4">
+				<span class="elementdetail" ui-sref="history"> History</span>
+			</div>
+		</div>
+		<div class="data" ng-controller="addapp">
+            <form ng-submit="submitForm()">
+			<div class="requestform">
+				<select ng-model="app.fid" ng-options="faculty.id as faculty.name for faculty in facultys">
+				</select><br>
+				<input type="text" placeholder="Subject" name="subject" ng-model="app.subject" required><br>
+				<input type="paragraph" placeholder="Message" name="message" ng-model="app.message" required><br>
+				<input type="date" name="date" ng-model = "app.date" >
+				<input type="time" name="time" ng-model = "app.time"> <br>
+				<button type="submit" name="submit">Request</button>
+				<button ui-sref="studenthome" type="submit" name="submit">Cancel</button><br>
+			</div>
+            </form>
+		</div>
+	</div>
+</div>
+</body>

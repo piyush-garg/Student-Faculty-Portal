@@ -1,0 +1,55 @@
+<html >
+<head>
+<title>Home | Student Faculty Meeting Portal</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="../Scripts/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+	<script src="../Scripts/script.js"></script>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" type="text/css" href="../CSS/style.css">
+<style>
+::-webkit-input-placeholder{
+   color: black;
+}
+
+</style>
+</head>
+<body>
+<div class="header">
+	<h1> The LNM Institute of Information Technology <br><span class="tagline">STUDENT FACULTY MEETING PORTAL</span></h1><br>
+</div>
+<div >
+	<div class="headershort">
+		<div class="user">
+			<span class="profile" >Hi <u style="cursor:pointer; color: blue;">{{username}}</u></span>
+		</div>
+		<div class="userhome">
+			<a ui-sref="studenthome"><input type="button" value="Home"></a>
+		</div>
+		<div class="logout">
+			<a ui-sref="login"><input type="button" value="Logout"></a>
+		</div>
+		<div class="well">
+			<input type="text" placeholder="Search Requests" ng-model="searchText.name">
+		</div>
+	</div>
+	<div class="menu">
+		<div class="menulist">
+			<div class="element1">
+				<span class="elementdetail" ui-sref="login"> Request Appoinment</span>
+			</div>
+			<div class="element2">
+				<span class="elementdetail"> <a ui-sref="facultyschedule"> Show Schedule of Faculty</a></span>
+			</div>
+			<div class="element4">
+				<span class="elementdetail" ui-sref="history"> History</span>
+			</div>
+		</div>
+		<div class="data" style="margin-top: 250px; margin-right: -550px;">
+			<span style="font-size: 20px; color: green;">Your request have been submitted</span>
+		</div>
+	</div>
+</div>
+</body>

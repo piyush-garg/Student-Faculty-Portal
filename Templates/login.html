@@ -1,0 +1,21 @@
+<body>
+<div ng-controller="login">
+<div class="header">
+	<h1> The LNM Institute of Information Technology <br><span class="tagline">STUDENT FACULTY MEETING PORTAL</span></h1><br>
+</div>
+<div class="home"></div>
+<div class="grad"></div>
+<form ng-submit="submitForm()">
+    <div class="form" >
+		<input type="text" placeholder="Student Id / Faculty Id" name="username" ng-model="user.username" required><br>
+		<input type="password" placeholder="Password" name="password" ng-model="user.password"required><br>
+        <input type="radio" name="chooseone" value=1 ng-model="user.s"> Student
+		<input type="radio" name="chooseone" value=0 ng-model="user.s"> Faculty<br>
+		<button type="submit" >Login</button><br>
+		<div class="redirect">
+			<span>Create Account?</span><a ui-sref="signup"> <input type="button" value="Sign Up"></a><br>
+		</div>
+	</div>
+</form>
+</div>
+</body>
